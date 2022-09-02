@@ -30,12 +30,12 @@ public class Task {
 	@JsonDeserialize(using = LocalDateDeserializer.class)
 	@JsonSerialize(using = LocalDateSerializer.class)
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy HH:mm")
-	private LocalDate dateTaskAdded = LocalDate.from(LocalDateTime.now());
+	private LocalDateTime dateTaskAdded = LocalDateTime.now();
 
 	@JsonDeserialize(using = LocalDateDeserializer.class)
 	@JsonSerialize(using = LocalDateSerializer.class)
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy HH:mm")
-	private String setTaskDate;
+	private LocalDateTime TaskDate;
 	@ManyToOne
 	@JoinColumn(name = "user_id")
 	private User user;
